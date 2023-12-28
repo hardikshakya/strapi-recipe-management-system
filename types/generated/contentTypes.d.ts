@@ -466,6 +466,7 @@ export interface ApiRecipeRecipe extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.user'
     >;
+    image: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
