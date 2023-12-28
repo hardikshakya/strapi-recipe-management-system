@@ -26,14 +26,21 @@
     },
     "ingredients": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::ingredient.ingredient"
+      "relation": "manyToMany",
+      "target": "api::ingredient.ingredient",
+      "inversedBy": "recipes"
     },
     "category": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "recipe"
+      "inversedBy": "recipes"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "recipes"
     }
   }
 }

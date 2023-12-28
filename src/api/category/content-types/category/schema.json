@@ -17,9 +17,9 @@
     "description": {
       "type": "blocks"
     },
-    "recipe": {
+    "recipes": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::recipe.recipe",
       "mappedBy": "category"
     }
